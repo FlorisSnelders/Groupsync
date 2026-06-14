@@ -67,6 +67,8 @@ Freemium. Free users can join up to 3 activities per month; Premium (€11.99/mo
 
 A full walkthrough of the app (~5 min) is included in this repo: [`demo/groupsync-demo.mp4`](demo/groupsync-demo.mp4). Open the file on GitHub to play it directly in the browser.
 
+> The demo is a silent visual walkthrough — see the **How it works** section above for the full explanation of each step shown in the video.
+
 ---
 
 *Built by Floris Snelders — Year 1 Data Science & AI, BUas — for Block C.*
