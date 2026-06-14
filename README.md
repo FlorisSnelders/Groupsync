@@ -71,4 +71,4 @@ A full walkthrough of the app (~5 min) is included in this repo: [`demo/groupsyn
 
 ---
 
-*Built by Floris Snelders — Year 1 Data Science & AI, BUas — for Block C.*
+*Built by Floris Snelders — Year 1 Data Science & AI, BUas — for the After-the-Block Challenge (Challenge C).*
