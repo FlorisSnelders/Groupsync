@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "GroupSync",
+    "slug": "groupsync",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#FF6B6B"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.groupsync.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "GroupSync uses your location to show nearby activities."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FF6B6B"
+      },
+      "package": "com.groupsync.app",
+      "permissions": ["ACCESS_FINE_LOCATION", "RECEIVE_BOOT_COMPLETED", "VIBRATE"]
+    },
+    "plugins": [
+      "expo-secure-store"
+    ],
+    "extra": {
+      "apiUrl": "http://192.168.1.166:3000"
+    }
+  }
+}
