@@ -29,11 +29,15 @@ class ApiService {
     this.client.interceptors.response.use(
       (response) => response,
       async (error) => {
-        if (error.response?.status === 401) {
+        const url: string = error.config?.url ?? '';
+        // Only react to 401s from protected (non-auth) endpoints. Reacting to a
+        // 401 from /auth/* (e.g. logout itself) would re-trigger a logout request
+        // and spin into an infinite loop. Clear the session locally — no network
+        // call — to avoid that loop.
+        if (error.response?.status === 401 && !url.includes('/auth/')) {
           await SecureStore.deleteItemAsync('auth_token');
-          // Trigger logout — import store lazily to avoid circular deps
           const { useAuthStore } = await import('@/store/authStore');
-          useAuthStore.getState().logout();
+          useAuthStore.setState({ user: null, token: null });
         }
         return Promise.reject(error);
       }

@@ -34,25 +34,11 @@ export async function submitQuestionnaire(req: Request, res: Response, next: Nex
       [uuidv4(), activityId, userId, JSON.stringify(responses)]
     );
 
-    // Check if all participants have submitted → generate suggestions
-    const activity = await db.query(
-      `SELECT current_participants FROM activities WHERE id = $1`,
-      [activityId]
-    );
-    const submittedCount = await db.query(
-      `SELECT COUNT(*) FROM ai_questionnaires WHERE activity_id = $1`,
-      [activityId]
-    );
+    // DEMO MODE: generate suggestions as soon as anyone submits, instead of
+    // waiting for every participant in the group to fill out the questionnaire.
+    generateAndSaveSuggestions(activityId).catch(console.error);
 
-    const allSubmitted =
-      parseInt(submittedCount.rows[0].count) >= activity.rows[0].current_participants;
-
-    if (allSubmitted) {
-      // Fire-and-forget AI generation
-      generateAndSaveSuggestions(activityId).catch(console.error);
-    }
-
-    res.json({ message: 'Responses saved', allSubmitted });
+    res.json({ message: 'Responses saved', allSubmitted: true });
   } catch (err) {
     next(err);
   }

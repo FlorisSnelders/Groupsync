@@ -26,6 +26,10 @@ export default function SignupScreen({ navigation }: Props) {
       Alert.alert('Age requirement', 'You must be 18 or older to use GroupSync');
       return;
     }
+    if (password.length < 8) {
+      Alert.alert('Password too short', 'Your password must be at least 8 characters.');
+      return;
+    }
     try {
       await signup(email.trim(), password, name.trim());
     } catch {
