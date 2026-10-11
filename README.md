@@ -4,6 +4,18 @@
 
 GroupSync is a mobile app that helps people make real-life friends by joining small group activities. Instead of matching with strangers and hoping a conversation goes somewhere, you pick something fun to do — tacos, a hike, board games, a pottery class — join a small group of 3–5 people, and an AI helps the group plan the actual hangout. You meet people by *doing things together*.
 
+**Status:** working prototype (React Native app + Node/Express API). AI planning calls OpenAI (gpt-4o-mini); without an API key it falls back to generic suggestions. Stripe payments are not implemented yet; Premium is a database flag.
+
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/screenshots/feed.png" alt="Activity feed" width="250"><br><sub>Activity feed</sub></td>
+    <td align="center"><img src="docs/screenshots/ai-plans.png" alt="AI-generated plans" width="250"><br><sub>AI plans and voting</sub></td>
+    <td align="center"><img src="docs/screenshots/chat.png" alt="Group chat" width="250"><br><sub>Group chat</sub></td>
+  </tr>
+</table>
+
 ---
 
 ## Why this app exists
@@ -23,7 +35,7 @@ There's also a small but real friction that kills a lot of group plans: *"okay, 
 1. **Sign up & onboard** — create an account, write a short bio, and pick at least 3 interests so the feed can match your vibe.
 2. **Discover** — browse a visual feed of nearby activities, filterable by category. Each shows the category, time, place, and how many spots are filled.
 3. **Join** — tap an activity to see the details and grab a spot. Groups are deliberately small (3–5 people).
-4. **Plan with AI** — everyone answers a quick questionnaire (time, budget, vibe). The AI turns the group's combined preferences into 3 concrete plans — each with a venue type, timing, and price.
+4. **Plan with AI** — everyone answers a quick questionnaire (time, budget, vibe). The AI turns the group's combined preferences into 3 concrete plans — each with a venue type, timing, and price (when OpenAI is connected).
 5. **Vote** — the group votes on its favourite plan; the winner rises to the top.
 6. **Group chat** — a real-time chat opens so the group can sort out the final details.
 7. **Meet up** — and turn an activity into actual friendships.
