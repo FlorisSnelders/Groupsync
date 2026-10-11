@@ -10,9 +10,11 @@ GroupSync is a mobile app that helps people make real-life friends by joining sm
 
 <table>
   <tr>
-    <td align="center"><img src="docs/screenshots/feed.png" alt="Activity feed" width="250"><br><sub>Activity feed</sub></td>
-    <td align="center"><img src="docs/screenshots/ai-plans.png" alt="AI-generated plans" width="250"><br><sub>AI plans and voting</sub></td>
-    <td align="center"><img src="docs/screenshots/chat.png" alt="Group chat" width="250"><br><sub>Group chat</sub></td>
+    <td align="center"><img src="docs/screenshots/feed.png" alt="Activity feed" width="160"><br><sub>Discover activities</sub></td>
+    <td align="center"><img src="docs/screenshots/activity.png" alt="Activity details" width="160"><br><sub>Join an activity</sub></td>
+    <td align="center"><img src="docs/screenshots/questionnaire.png" alt="Planning questionnaire" width="160"><br><sub>Group questionnaire</sub></td>
+    <td align="center"><img src="docs/screenshots/ai-plans.png" alt="AI plans and voting" width="160"><br><sub>AI plans and voting</sub></td>
+    <td align="center"><img src="docs/screenshots/chat.png" alt="Group chat" width="160"><br><sub>Live group chat</sub></td>
   </tr>
 </table>
 
